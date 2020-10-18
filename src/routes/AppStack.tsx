@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
 const { Navigator, Screen } = createStackNavigator();
 
-import OrphanagesMap from '../pages/OrphanagesMap';
-import InitPage from '../pages/InitPage';
-import AnotherToDoList from '../pages/AnotherToDoList';
-import SelectMapPosition from '../pages/CreateOrphanage/SelectMapPosition';
-import OrphanageData from '../pages/CreateOrphanage/OrphanageData';
+import OrphanagesMap from "../pages/OrphanagesMap";
+import InitPage from "../pages/InitPage";
+import AnotherToDoList from "../pages/AnotherToDoList";
+import SelectMapPosition from "../pages/CreateOrphanage/SelectMapPosition";
+import OrphanageData from "../pages/CreateOrphanage/OrphanageData";
 // import VisitationData from '../pages/CreateOrphanage/VisitationData';
-import OrphanageDetails from '../pages/OrphanageDetails';
-import Header from '../components/Header';
+import OrphanageDetails from "../pages/OrphanageDetails";
+import Header from "../components/Header";
 
 export default function Routes() {
   return (
@@ -20,17 +20,12 @@ export default function Routes() {
       <Navigator
         screenOptions={{
           headerShown: false,
-          cardStyle: { backgroundColor: '#F2F3F5' }
-        }}>
-        <Screen
-          name="InitPage"
-          component={InitPage}
-        />
+          cardStyle: { backgroundColor: "#F2F3F5" },
+        }}
+      >
+        <Screen name="InitPage" component={InitPage} />
 
-        <Screen
-          name="OrphanagesMap"
-          component={OrphanagesMap}
-        />
+        <Screen name="OrphanagesMap" component={OrphanagesMap} />
 
         <Screen
           name="SelectMapPosition"
@@ -59,10 +54,7 @@ export default function Routes() {
           }}
         />
 
-        <Screen
-          name="AnotherToDoList"
-          component={AnotherToDoList}
-        />
+        <Screen name="AnotherToDoList" component={AnotherToDoList} />
       </Navigator>
     </NavigationContainer>
   );
